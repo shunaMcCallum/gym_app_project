@@ -1,0 +1,83 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="edit_page_container">
+
+<h1>update workout</h1>
+
+<form class="edit_form" action="/workouts/{{workout.id}}" method="post">
+    <table class="edit_table">
+    <tr>
+        <td>
+            <label class="edit_form_label" for="name">Name</label>
+        </td>
+        <td>
+            <input class="edit_form_input" type="text" id="name" name="name" value="{{workout.name}}" placeholder={{workout.name}} required autofocus>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="edit_form_label" for="date">Date</label>
+        </td>
+        <td>
+            <input class="edit_form_input" type="date" id="date" name="date" value={{workout.date}} placeholder={{workout.date}} required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="edit_form_label" for="description">Description</label>
+        </td>
+        <td>
+            <input class="edit_form_input" type="text" id="description" name="description" value="{{workout.description}}" placeholder={{workout.description}} required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="edit_form_label" for="duration">Duration</label>
+        </td>
+        <td>
+            <input class="edit_form_input" type="number" id="duration" name="duration" value={{workout.duration}} placeholder={{workout.duration}} required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="edit_form_label" for="capacity">Capacity</label>
+        </td>
+        <td>
+            <input class="edit_form_input" type="number" id="capacity" name="capacity" value={{workout.capacity}} placeholder={{workout.capacity}} required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="edit_form_input" type="hidden" id="capacity_filled" name="capacity_filled" value={{workout.capacity_filled}}>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="edit_form_label" for={{workout.active}}>Active</label>
+            </td>
+            {% if workout.active == 1 %}
+            <td>
+                <select class="edit_form_input" id="active" name="active">
+                    <option value={{workout.active}}>Yes</option>
+                    <option value=False>No</option>
+                </select>
+            </td>
+            {% elif workout.active == 0 %}
+            <td>
+                <select class="edit_form_input" id="active" name="active">
+                    <option value={{workout.active}}>No</option>
+                    <option value=True>Yes</option>
+                </select>
+            </td>
+            {% endif %}
+        </tr>
+    </table>
+    <div>
+        <button class="edit_page_button" type="submit">Submit</button>
+    </div>
+</form>
+
+</div>
+
+{% endblock %}

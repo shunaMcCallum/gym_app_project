@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="show_page_container">
+
+<h1>view workout</h1>
+
+<div class="show_page_top_details">
+    <div><b>Name: </b> {{workout.name}}</div>
+    <div><b>Date: </b> {{workout.date}}</div>
+    <div><b>Description: </b> {{workout.description}}</div>
+    <div><b>Duration: </b> {{workout.duration}} mins</div>
+    <div><b>Capacity: </b> {{workout.capacity}}</div>
+    <div><b>Capacity Filled: </b> {{workout.capacity_filled}}</div>
+    {% if workout.active == True %}
+    <div><b>Active: </b>Yes</div>
+    {% elif workout.active == False %}
+    <div><b>Active: </b>No</div>
+    {% endif %}
+</div>
+
+<div id="show_page_top_buttons">
+<button class="show_page_button" id="update_button"><a class="show_page_link" href="/workouts/{{workout.id}}/update">Update Details</a></button>
+<form action="/workouts/{{workout.id}}/delete" method="POST"><button class="show_page_button" id="delete_button">Delete Workout</button></form>
+</div>
+
+<h3 class="bookings_header">Bookings:</h3>
+<table class="show_page_table">
+    <tr class="show_page_table_headers" id="show_page_table_headers_workouts">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>View</th>
+        <th>Delete</th>
+    </tr>
+    {% for booking in bookings %}
+    <tr class="show_page_table_content">
+        <td>{{booking.member.first_name}}</td>
+        <td>{{booking.member.last_name}}</td>
+        <td>
+            <button class="show_page_button" id="show_page_view_button">
+                <a class="show_page_link" href="/members/{{booking.member.id}}">View Member Details</a>
+            </button>
+        </td>
+        <td class="delete_column">
+            <form action="/bookings/workout/{{booking.id}}/delete" method="POST">
+                <button class="show_page_button" id="show_page_delete_button"><i class="fa-solid fa-trash-can" style="color: red"></i></button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% if workout.capacity_filled == workout.capacity %}
+    <p id="full_message"><b>Sorry this workout is full, you can't add any more bookings.</b></p>
+{% elif workout.active == False %}
+    <p if="full_message"><b>Sorry this workout is inactive, you can't add any bookings.</b></p>
+{% else %}
+    <button class="show_page_button" id="show_page_bottom_button">
+        <a class="show_page_link" href="/bookings/create/workout/{{workout.id}}">Add New Booking</a>
+    </button>
+{% endif %}
+
+
+{% endblock %}

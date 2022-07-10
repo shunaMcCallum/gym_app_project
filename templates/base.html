@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_pages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='create_pages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='show_pages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit_pages.css') }}">
+    <script src="https://kit.fontawesome.com/2f859ff610.js" crossorigin="anonymous"></script>
+    <title>the gym</title>
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="base">
+    <header>
+        <h1 class="page_headers">{{route_name}}</h1>
+        <p class="header-squares"><i class="fa-solid fa-square" id="square" style="color:#1c6eb6"></i> <i class="fa-solid fa-square" style="color:#c12214"></i>
+        <i class="fa-solid fa-square" style="color:#029100"></i></p>
+    </header>
+    <div class="nav_bar">
+        <nav>
+                <button class="nav_item" id="nav_home"><a href="/">Home</a></button>
+                <button class="nav_item" id="nav_member"><a href="/members">Members</a></button>
+                <button class="nav_item" id="nav_workout"><a href="/workouts">Workouts</a></button>
+                <button class="nav_item" id="nav_booking"><a href="/bookings">Bookings</a></button>
+        </nav>
+    </div>
+    </div>
+
+    <div class="block_content">
+        {% block content %}
+        
+        {% endblock%}
+    </div>
+</div>
+</body>
+    <footer>
+        <p> © 2022 the_gym_app</p>
+        <nav>
+            <ul>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </footer>
+</html>

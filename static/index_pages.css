@@ -1,0 +1,97 @@
+.index_page_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.index_page_container > p {
+    margin-bottom: 0px;
+}
+
+.index_table {
+    width: auto;
+    text-align: left;
+}
+
+.index_table_headers {
+    background-color: #1c6eb6;
+    color: white;
+}
+
+#index_table_headers_workouts {
+    background-color: #c12214;
+}
+
+#index_table_headers_bookings {
+    background-color: #029100;
+}
+
+.index_table_headers > th {
+    padding: 15px 10px;
+}
+
+.index_table_content > td {
+    padding: 5px 10px;
+}
+
+.index_table_content:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.active_column {
+    text-align: center;
+}
+
+.delete_column {
+    text-align: center;
+}
+
+.index_page_button {
+    padding: 7px;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+.index_page_button:hover {
+    background-color: #aeaeae;
+}
+
+.index_page_link {
+    color: #000000;
+    text-decoration: none;
+}
+
+#index_page_link_bookings {
+    text-decoration: underline;
+}
+
+#index_page_link_bookings:hover {
+    color: #0cca0c
+}
+
+#index_page_top_button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#index_page_top_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+#index_page_bottom_button {
+    margin-top: 20px;
+}
+
+#index_page_bottom_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+#view_details_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+#bookings_page_delete_button {
+    border-style: none;
+}

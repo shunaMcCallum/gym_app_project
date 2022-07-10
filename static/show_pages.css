@@ -1,0 +1,88 @@
+.show_page_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.show_page_top_details>div {
+    margin: 10px auto;
+}
+
+.show_page_table {
+    width: auto;
+    text-align: left;
+}
+
+.show_page_table_headers {
+    background-color: #1c6eb6;
+    color: white;
+}
+
+#show_page_table_headers_workouts {
+    background-color: #c12214;
+}
+
+.show_page_table_headers>th {
+    padding: 15px 10px;
+}
+
+.show_page_table_content>td {
+    padding: 5px 10px;
+}
+
+.show_page_table_content:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#update_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+.show_page_button {
+    padding: 7px;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+.show_page_button:hover {
+    background-color: #aeaeae;
+}
+
+#show_page_view_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+#show_page_delete_button {
+    border: none;
+}
+
+#show_page_delete_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+.show_page_link {
+    color: #000000;
+    text-decoration: none;
+}
+
+#show_page_top_buttons>button {
+    margin: 10px auto;
+}
+
+#show_page_bottom_button {
+    margin-top: 20px;
+}
+
+#show_page_bottom_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+#full_message {
+    margin-top: 30px;
+}
+
+.bookings_header {
+    margin-top: 40px;
+}

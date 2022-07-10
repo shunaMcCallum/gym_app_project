@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="show_page_container">
+
+<h1>view member</h1>
+
+<div class="show_page_top_details">
+    <div><b>Name: </b>{{member.first_name}} {{member.last_name}}</div>
+    <div><b>Date of Birth: </b>{{member.dob}}</div>
+    {% if member.active == True %}
+    <div><b>Active: </b>Yes</div>
+    {% elif member.active == False %}
+    <div><b>Active: </b>No</div>
+    {% endif %}
+</div>
+
+<div id="show_page_top_buttons">
+    <button class="show_page_button" id="update_button"><a class="show_page_link" href="/members/{{member.id}}/update">Update Details</a></button>
+    <form action="/members/{{member.id}}/delete" method="POST"><button class="show_page_button" id="delete_button">Delete Member</button></form>
+</div>
+
+<h3 class="bookings_header">Bookings:</h3>
+<table class="show_page_table">
+    <tr class="show_page_table_headers" id="show_page_table_headers_members">
+        <th>Workout</th>
+        <th>Date</th>
+        <th>View</th>
+        <th>Delete</th>
+    </tr>
+    {% for booking in bookings %}
+    <tr class="show_page_table_content">
+        <td>{{booking.workout.name}}</td>
+        <td>{{booking.workout.date}}</td>
+        <td>
+            <button class="show_page_button" id="show_page_view_button">
+                <a class="show_page_link" href="/workouts/{{booking.workout.id}}">View Workout Details</a>
+            </button>
+        </td>
+        <td class="delete_column">
+            <form action="/bookings/member/{{booking.id}}/delete" method="POST">
+                <button class="show_page_button" id="show_page_delete_button"><i class="fa-solid fa-trash-can" style="color: red"></i></button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% if member.active == False %}
+<p><b>Sorry, you can't add bookings for inactive members.</b></p>
+{% else %}
+<button class="show_page_button" id="show_page_bottom_button">
+    <a class="show_page_link" href="/bookings/create/member/{{member.id}}">Add New Booking</a>
+</button>
+{% endif %}
+
+</div>
+
+{% endblock %}

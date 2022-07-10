@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="index_page_container">
+    <p>Below is a list of all bookings on the system.</p>
+    <p>Click on the name of the member or workout to view more of their details.</p>
+    <p>If you'd like to make a new booking, click either of the Add New Booking buttons.</p>
+    <p>Or, if you'd like to delete a booking just press the Delete button next to the relevant booking.</p>
+    
+    <button class="index_page_button" id="index_page_top_button">
+        <a class="index_page_link" href="/bookings/create">Add New Booking</a>
+    </button>
+
+    <table class="index_table">
+        <tr class="index_table_headers" id="index_table_headers_bookings">
+            <th>ID</th>
+            <th>Member Name</th>
+            <th>Workout</th>
+            <th>Delete</th>
+        </tr>
+        {% for booking in bookings %}
+        <tr class="index_table_content">
+        <td>{{booking.id}}</td>
+        <td><a class="index_page_link" id="index_page_link_bookings" href="/members/{{booking.member.id}}">{{booking.member.first_name}} {{booking.member.last_name}}</a></td>
+        <td><a class="index_page_link" id="index_page_link_bookings" href="/workouts/{{booking.workout.id}}">{{booking.workout.name}}</a></td>
+        <td class="delete_column">
+            <form action="/bookings/{{booking.id}}/delete" method="POST">
+                <button class="index_page_button" id="bookings_page_delete_button"><i class="fa-solid fa-trash-can" style="color: red"></i></button>
+            </form>
+        </td>
+        {% endfor %}
+    </table>
+
+    <button class="index_page_button" id="index_page_bottom_button">
+        <a class="index_page_link" href="/bookings/create">Add New Booking</a>
+    </button>
+
+</div>
+
+{% endblock %}

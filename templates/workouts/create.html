@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="create_page_container">
+
+<h1>create new workout</h1>
+
+<form class="create_form" action="/workouts" method="post">
+    <table class="create_table">
+    <tr>
+        <td>
+            <label class="create_form_label" for="name">Name</label>
+        </td>
+        <td>
+            <input class="create_form_input" type="text" id="name" name="name" placeholder="name" required autofocus>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="create_form_label" for="date">Date</label>
+        </td>
+        <td>
+            <input class="create_form_input" type="date" id="date" name="date" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="create_form_label" for="description">Description</label>
+        </td>
+        <td>
+            <input class="create_form_input" type="text" id="description" name="description" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="create_form_label" for="duration">Duration</label>
+        </td>
+        <td>
+            <input class="create_form_input" type="number" id="duration" name="duration" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="create_form_label" for="capacity">Capacity</label>
+        </td>
+        <td>
+            <input class="create_form_input" type="number" id="capacity" name="capacity" required>
+        </td>
+    </tr>
+
+    </table>
+    <div>
+        <button class="create_page_button" type="submit">Submit</button>
+    </div>
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,153 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    min-height: 94vh;
+}
+
+.page_headers {
+    font-size: 800%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.base {
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.base>header {
+    display: flex;
+}
+
+.base>header>p {
+    align-self: flex-end;
+    margin-bottom: 74px;
+}
+
+.header-squares {
+    margin-right: auto;
+}
+
+.nav_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.nav_item {
+    display: inline;
+    margin: 5px 1px;
+    padding: 22px;
+    border-radius: 8px;
+    border: none;
+}
+
+.nav_item:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+.nav_item>a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+}
+
+#nav_home {
+    background-color: #3e3d3d;
+}
+
+#nav_home:hover {
+    background-color: #797979;
+}
+
+#nav_member {
+    background-color: #1c6eb6;
+}
+
+#nav_member:hover {
+    background-color: #7daffe;
+    padding: 22px;
+}
+
+#nav_workout {
+    background-color: #c12214;
+}
+
+#nav_workout:hover {
+    background-color: #ff7a7a;
+}
+
+#nav_booking {
+    background-color: #029100;
+}
+
+#nav_booking:hover {
+    background-color: #71e771;
+}
+
+footer {
+    display: flex;
+    background-color: #3e3d3d;
+    color: white;
+    font-style: bold;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer>nav>ul {
+    display: flex;
+    list-style: none;
+}
+
+footer>nav>ul>li {
+    margin-right: 10px;
+    font-size: smaller;
+}
+
+footer>nav>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HOMEPAGE CSS */
+.page_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.page_container>h3 {
+    margin-top: 0px;
+}
+
+#top_para {
+    margin-bottom: 4px;
+}
+
+#bottom_para {
+    margin-top: 3px;
+}
+
+.home_list {
+    margin: 0px 0px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}

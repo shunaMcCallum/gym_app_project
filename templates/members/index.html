@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="index_page_container">
+    <p>Below is a full list of members. Click on the View Details button to see a member's full details and book them into workouts.</p>
+    <p>To add a new member, click either of the Add Member buttons.</p>
+    
+    <button class="index_page_button" id="index_page_top_button">
+        <a class="index_page_link" href="/members/create">Add New Member</a>
+    </button>
+
+    <table class="index_table">
+        <tr class="index_table_headers">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Active</th>
+            <th>View</th>
+        </tr>
+        {% for member in members %}
+        <tr class="index_table_content">
+            <td>{{member.first_name}}</td>
+            <td>{{member.last_name}}</td>
+            <td>{{member.id}}</td>
+            {% if member.active == True %}
+            <td class="active_column"><i class="fa-solid fa-check" style="color: green"></i></td>
+            {% elif member.active == False %}
+            <td class="active_column"><i class="fa-solid fa-xmark" style="color: red"></i></td>
+            {% endif %}
+            <td class="delete_column"><button class="index_page_button" id="view_details_button"><a class="index_page_link" href="/members/{{member.id}}">View Details</button></td>
+        {% endfor %}
+        </tr>
+    </table>
+
+    <button class="index_page_button" id="index_page_bottom_button">
+        <a class="index_page_link" href="/members/create">Add New Member</a>
+    </button>
+
+</div>
+
+{% endblock %}

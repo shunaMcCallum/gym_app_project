@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="index_page_container">
+    <p>Below is a full list of workout classes on offer. Click on the View Details button to view a workout's full details and book members into the workout.</p>
+    <p>To add a new workout, click either of the Add Workout buttons.</p>
+
+    <button class="index_page_button" id="index_page_top_button" id="index_page_button_workouts">
+        <a class="index_page_link" href="/workouts/create">Add New Workout</a>
+    </button>
+
+    <table class="index_table">
+        <tr class="index_table_headers" id="index_table_headers_workouts">
+            <th>Date</th>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Spaces Filled</th>
+            <th>Active</th>
+            <th>View</th>
+        </tr>
+        {% for workout in workouts %}
+        <tr class="index_table_content">
+            <td>{{workout.date}}</td>
+            <td>{{workout.name}}</td>
+            <td>{{workout.duration}} mins</td>
+            <td>{{workout.capacity_filled}} / {{workout.capacity}}</td>
+            {% if workout.active == True %}
+            <td class="active_column"><i class="fa-solid fa-check" style="color: green"></i></td>
+            {% elif workout.active == False %}
+            <td class="active_column"><i class="fa-solid fa-xmark" style="color: red"></i></td>
+            {% endif %}
+            <td class="delete_column"><button class="index_page_button" id="view_details_button"><a class="index_page_link" href="/workouts/{{workout.id}}">View Details</button></td>
+        {% endfor %}
+        </tr>
+    </table>
+
+        <button class="index_page_button" id="index_page_bottom_button">
+            <a class="index_page_link" href="/workouts/create">Add New Workout</a>
+        </button>
+        
+</div>
+
+{% endblock %}

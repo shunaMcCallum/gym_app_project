@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="create_page_container">
+
+    <h1>add new booking</h1>
+
+    <form class="create_form" action="/bookings/workout/{{workout.id}}" method="post">
+        <table class="create_table">
+            <tr>
+                <td>
+                    <label class="create_form_label" for="member">Member</label>
+                </td>
+                <td>
+                    <select class="create_form_input" id="member" name="member_id">
+                        <option value="" selected disabled hidden></option>
+                        {% for member in members %}
+                        <option value="{{member.id}}">{{member.first_name}} {{member.last_name}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="create_form_label" for="workout">Workout</label>
+                </td>
+                <td>
+                    <select class="create_form_input" id="workout" name="workout_id">
+                        <option value="{{workout.id}}">{{workout.name}}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <button class="create_page_button" type="submit">Submit</button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

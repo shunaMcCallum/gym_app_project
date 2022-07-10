@@ -1,0 +1,38 @@
+.create_page_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.create_form {
+    width: 20%;
+    margin-left: -30px;
+}
+
+.create_form_input {
+    padding: 10px 5px;
+    width: 150%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.create_page_button {
+    padding: 7px;
+    border-radius: 8px;
+    border-width: 1px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.create_page_button:hover {
+    background-color: #aeaeae;
+}
+
+.create_page_button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
