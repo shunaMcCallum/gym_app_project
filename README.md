@@ -35,3 +35,6 @@ RUNNING INSTRUCTIONS
       flask run
 
    And click on the link that comes up to open the app in your web browser.
+
+LESSONS FROM THIS PROJECT:
+This project gave me experience in planning and building a full app from scratch, working with databases with many-to-many relationships and passing data from the back-end to the front-end of an app.
