@@ -1,9 +1,9 @@
 # The Gym <br />
 ## Gym Management App
 
-[<img alt="homepage_img" width="26px" src="../images/homepage.png" />][<img alt="homepage_img" width="26px" src="../images/homepage.png" />]
+[<img alt="homepage_img" width="26px" src="images/homepage.png" />][<img alt="homepage_img" width="26px" src="images/homepage.png" />]
 
-###Project Brief
+### Project Brief
 A local gym has asked you to build a piece of software to help them to manage memberships, and register members for classes.
 
 MVP:
@@ -17,16 +17,16 @@ Classes could have a maximum capacity, and users can only be added while there i
 The gym could be able to give its members Premium or Standard membership. Standard members can only be signed up for classes during off-peak hours.
 The Gym could mark members and classes as active/deactivated. Deactivated members/classes will not appear when creating bookings.
 
-###Technologies Used
+### Technologies Used
 This app was built in Flask using the Python3, SQLite3, HTML and CSS languages.
 
-###Lessons from this Project
+### Lessons from this Project
 This project gave me experience in planning and building a full app from scratch, working with databases with many-to-many relationships and passing data from the back-end to the front-end of an app.
 
-###App Demo
-[![Demo]](../images/gym_app_full.mov)
+### App Demo
+[![Demo]](images/gym_app_full.mov)
 
-###Running Instructions
+### Running Instructions
 1. To run this app, clone the git repository.
 
 2. Open up the terminal then cd all th way into the gym_app folder and run the following command:
