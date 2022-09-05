@@ -1,7 +1,7 @@
-#The Gym <br />
-##Gym Management App
+# The Gym <br />
+## Gym Management App
 
-[<img alt="homepage_img" width="26px" src="../images/homepage.png" />](../images/homepage.png)
+[<img alt="homepage_img" width="26px" src="../images/homepage.png" />][<img alt="homepage_img" width="26px" src="../images/homepage.png" />]
 
 ###Project Brief
 A local gym has asked you to build a piece of software to help them to manage memberships, and register members for classes.
