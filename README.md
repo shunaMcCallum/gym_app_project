@@ -37,10 +37,7 @@ This project gave me experience in planning and building a full app from scratch
    
    This will seed the database with some dummy data.
 
-4. Finally, still in the terminal run the following comma
-
-
-nd:
+4. Finally, still in the terminal run the following command:
       flask run
 
    And click on the link that comes up to open the app in your web browser.
