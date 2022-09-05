@@ -24,9 +24,6 @@ This app was built in Flask using the Python3, SQLite3, HTML and CSS languages.
 ### Lessons from this Project
 This project gave me experience in planning and building a full app from scratch, working with databases with many-to-many relationships and passing data from the back-end to the front-end of an app.
 
-### App Demo
-![Demo](images/gym_app_full.mov)
-
 ### Running Instructions
 1. To run this app, clone the git repository.
 
@@ -45,4 +42,6 @@ This project gave me experience in planning and building a full app from scratch
 
    And click on the link that comes up to open the app in your web browser.
 
+### App Demo
+<video src="https://user-images.githubusercontent.com/103276344/188515715-62cc4345-5c7e-451a-b27b-aec02d9b0fdd.mp4" width="500px"></video>
 
