@@ -25,7 +25,7 @@ This app was built in Flask using the Python3, SQLite3, HTML and CSS languages.
 This project gave me experience in planning and building a full app from scratch, working with databases with many-to-many relationships and passing data from the back-end to the front-end of an app.
 
 ### App Demo
-[![Deni]("images/gym_app_full.mp4")]("images/gym_app_full.mp4")
+[![Demo]("/images/gym_app_full.mp4")]("/images/gym_app_full.mp4")
 
 ### Running Instructions
 1. To run this app, clone the git repository.
