@@ -26,6 +26,7 @@ This project gave me experience in planning and building a full app from scratch
 
 ### App Demo
 [![Demo]("/images/gym_app_full.mp4")]("/images/gym_app_full.mp4")
+<video src="images/gym_app_full.mp4" width=180/>
 
 ### Running Instructions
 1. To run this app, clone the git repository.
