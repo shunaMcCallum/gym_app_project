@@ -43,5 +43,5 @@ This project gave me experience in planning and building a full app from scratch
    And click on the link that comes up to open the app in your web browser.
 
 ### App Demo
-<video src="https://user-images.githubusercontent.com/103276344/188515715-62cc4345-5c7e-451a-b27b-aec02d9b0fdd.mp4" width="500px"></video>
+<video src="https://user-images.githubusercontent.com/103276344/188518417-1f3c03f2-a467-4f31-958e-b6825e898887.mp4" width="500px"></video>
 
