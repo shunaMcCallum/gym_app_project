@@ -25,8 +25,11 @@ This app was built in Flask using the Python3, SQLite3, HTML and CSS languages.
 This project gave me experience in planning and building a full app from scratch, working with databases with many-to-many relationships and passing data from the back-end to the front-end of an app.
 
 ### App Demo
-[![Demo]("/images/gym_app_full.mp4")]("/images/gym_app_full.mp4")
-<video src="images/gym_app_full.mp4" width=180/>
+[![Demo]((https://user-images.githubusercontent.com/103276344/188515715-62cc4345-5c7e-451a-b27b-aec02d9b0fdd.mp4)
+<video src="https://user-images.githubusercontent.com/103276344/188515715-62cc4345-5c7e-451a-b27b-aec02d9b0fdd.mp4" width=180/>
+
+https://user-images.githubusercontent.com/103276344/188515715-62cc4345-5c7e-451a-b27b-aec02d9b0fdd.mp4
+
 
 ### Running Instructions
 1. To run this app, clone the git repository.
@@ -41,7 +44,10 @@ This project gave me experience in planning and building a full app from scratch
    
    This will seed the database with some dummy data.
 
-4. Finally, still in the terminal run the following command:
+4. Finally, still in the terminal run the following comma
+
+
+nd:
       flask run
 
    And click on the link that comes up to open the app in your web browser.
