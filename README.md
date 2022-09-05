@@ -1,7 +1,7 @@
 # The Gym <br />
 ## Gym Management App
 
-[![Homepage_Image](images/homepage.png)
+![Homepage_Image](images/homepage.png)
 
 ### Project Brief
 A local gym has asked you to build a piece of software to help them to manage memberships, and register members for classes.
@@ -24,7 +24,7 @@ This app was built in Flask using the Python3, SQLite3, HTML and CSS languages.
 This project gave me experience in planning and building a full app from scratch, working with databases with many-to-many relationships and passing data from the back-end to the front-end of an app.
 
 ### App Demo
-[![Demo]](images/gym_app_full.mov)
+![Demo](images/gym_app_full.mov)
 
 ### Running Instructions
 1. To run this app, clone the git repository.
